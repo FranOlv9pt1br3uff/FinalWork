@@ -1,4 +1,3 @@
 # FinalWork
-Trabalho Final da Disciplina de Programação de Computadores IV. 
-Feito em Pascal.
+Trabalho Final da Disciplina de Programação de Computadores IV: Busca Binaria em Pascal.
 
