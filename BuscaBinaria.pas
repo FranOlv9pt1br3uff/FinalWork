@@ -1,6 +1,6 @@
 program project1;
 
-type = array[1..50] of integer;
+type = array[1..50] of integer; //Cria o vetor de 50 posiçoes
 
 var A: vetor;
     k: integer;
@@ -11,7 +11,7 @@ var i : integer;
 begin
   randomize;
   for i := 1 to 50 do
-     X[i] := random(100);
+     X[i] := random(100); //Preenche o vetor aleatóriamente
 end;
 
 procedure IMPRIMIR_VETOR_LINHA( var X: vetor);
@@ -24,7 +24,7 @@ begin
 end;
 
 
-procedure ORDENAR(var x: vetor);
+procedure ORDENAR(var x: vetor); 
 var aux, i, limite : integer;
 begin
  for limite:= 5 downto 2 do
@@ -37,7 +37,7 @@ for i:= 1 to limite-1 do
    end;
 end;
 
-procedure BuscaBinaria (Vetor: array of integer;  x: integer);
+procedure BuscaBinaria (Vetor: array of integer;  x: integer);  //Só funciona se o vetor estiver ordenado
       var inicio, fim: integer;
           meio: integer;
  begin
@@ -45,17 +45,17 @@ procedure BuscaBinaria (Vetor: array of integer;  x: integer);
       inicio := 1;
       fim:= 50;
       meio := ( inicio+ fim) div 2;
-      while (vetor[meio] <> x and  inicio <= fim) do
+      while (vetor[meio] <> x and  inicio <= fim) do  //Comparacao é sempre pelo meio;  
              begin
-                  If (vetor[meio]< x) then
+                  If (vetor[meio]< x) then //se for o valor for menor que o meio: ~''o meio se torna o novo fim''
                      fim:= meio -1;
                   Else
-                      inicio:= meio+1;
+                      inicio:= meio+1;  //"senao o meio se torna o novo inicio"
                       meio:= (inicio+fim) div 2;
              end;
              begin
                   If (vetor[meio] = x) then
-                     writeln ('achou posição = ', meio);
+                     writeln ('achou posição = ', meio); 
                   Else
                       writeln('nao tem');
              end;
